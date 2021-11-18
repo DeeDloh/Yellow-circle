@@ -9,6 +9,8 @@ class Yellow_circle_wid(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi("UI.ui", self)
+        self.setFixedSize(300, 460)
+        self.initUI()
 
     def initUI(self):
         self.setWindowTitle('Рисование')
@@ -27,9 +29,9 @@ class Yellow_circle_wid(QWidget):
         self.update()
 
     def draw_flag(self, qp):
-        k = randint(30, 50)
+        k = randint(30, 120)
         qp.setBrush(QColor(255, 255, 0))
-        qp.drawEllipse(200, 280, k, k)
+        qp.drawEllipse(120, 140, k, k)
         self.do_paint = False
 
 
